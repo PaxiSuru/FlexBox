@@ -1,4 +1,25 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: khaki;
+    background-color: violet;
     font-family: monospace;
+}
+
+.container {
+    background-color: snow;
+    display: flex;
+}
+
+.item{
+    background-color: mediumpurple;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    padding-top: 32px;
 }
