@@ -11,7 +11,19 @@ body {
 
 .container {
     background-color: snow;
+    display: inline-flex;
     display: flex;
+    flex-direction: row; /*No ocurre nada por que es el mismo valor. valor por default. Izq a Der*/
+    /*flex-direction: row-reverse; /* La dirección de nuestro flexbox esta invertida. Der a Izq*/
+    /*flex-direction: column; /* Se apilan en una sola columna. Solo se voltea el eje. Abajo hacia arriba. */
+    /*flex-direction: column-reverse; /* Las hace colocarse de arriba a abajo. Arriba hacia abajo.*/
+
+    justify-content: start; /* Alinea a la izquier-Der */
+    justify-content: end; /* Alinea a la Derc-Izq */
+    justify-content: center; /*  Alinea al centro*/
+    justify-content: space-around; /* Asigna espacio alrededor de cada elemento */
+    justify-content: space-between; /* Distribuye asignando un espacio proporcional */
+    justify-content: space-evenly; /* Espacio proporcional entre  */
 }
 
 .item{
@@ -22,4 +34,9 @@ body {
     font-size: 25px;
     font-weight: bold;
     padding-top: 32px;
+    border: 1px solid black;
 }
+
+/* El Inline-flex se ajusta al ancho de los items
+
+El flex; se ajusta al espacio disponible*/
