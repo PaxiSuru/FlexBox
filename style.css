@@ -10,26 +10,39 @@ body {
 }
 
 .container {
+    height: 500px;
     background-color: snow;
-    display: inline-flex;
     display: flex;
-    flex-direction: row; /*No ocurre nada por que es el mismo valor. valor por default. Izq a Der*/
+    /* align-items: flex-start Alinea hacia arriba */
+    /*align-items: flex-end; Alinea hacia abajo*/
+    /*align-items: center; Alinea en el centro*/
+    /*     align-items: stretch; Crece en la altura los elementos en espacio disponible. Los utems no deben tener alto definido.*/
+    /*align-items: baseline; Alinea los items en funcion de la linea base del texto que contienen. Independientemente del tamaño del texto, ubicacion del contenido y altura del item.
+    */
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: center;
+    
+
+    /*display: inline-flex;
+    display: flex;
+    /*flex-direction: row; /*No ocurre nada por que es el mismo valor. valor por default. Izq a Der*/
     /*flex-direction: row-reverse; /* La dirección de nuestro flexbox esta invertida. Der a Izq*/
     /*flex-direction: column; /* Se apilan en una sola columna. Solo se voltea el eje. Abajo hacia arriba. */
     /*flex-direction: column-reverse; /* Las hace colocarse de arriba a abajo. Arriba hacia abajo.*/
 
-    justify-content: start; /* Alinea a la izquier-Der */
-    justify-content: end; /* Alinea a la Derc-Izq */
-    justify-content: center; /*  Alinea al centro*/
-    justify-content: space-around; /* Asigna espacio alrededor de cada elemento */
-    justify-content: space-between; /* Distribuye asignando un espacio proporcional */
-    justify-content: space-evenly; /* Espacio proporcional entre  */
+    /*justify-content: start; /* Alinea a la izquier-Der */
+    /*justify-content: end; /* Alinea a la Derc-Izq */
+    /*justify-content: center; /*  Alinea al centro*/
+    /*justify-content: space-around; /* Asigna espacio alrededor de cada elemento */
+    /*justify-content: space-between; /* Distribuye asignando un espacio proporcional */
+    /*justify-content: space-evenly; /* Espacio proporcional entre  */
 }
 
 .item{
     background-color: mediumpurple;
     width: 100px;
-    height: 100px;
+   height: 100px;
     text-align: center;
     font-size: 25px;
     font-weight: bold;
@@ -40,3 +53,41 @@ body {
 /* El Inline-flex se ajusta al ancho de los items
 
 El flex; se ajusta al espacio disponible*/
+
+/* Vamos a usar pseudoclases para seleccionar los items individualmente. */
+
+/* Reto
+
+1.Cada item debe tener un tamaño de fuente distinto.
+
+2.Cada item debe tener un padding top distinto
+
+3. Cada item debe tener un alto distinto. Que no exceda el alto del contenedor*/
+
+/* .item:nth-child(1) {
+    background-color: lightblue;
+    padding-top: 100px;
+    font-size: 2rem;
+    height: 200px;
+} */
+
+/* .item:nth-child(2) {
+    background-color: lightsalmon;
+    padding-top: 302px;
+    font-size: 30px;
+    height: 344px;
+} */
+
+/* .item:nth-child(3) {
+    background-color: lightgreen;
+    padding-top: 44px;
+    font-size: 80px;
+    height: 444px;
+} */
+
+/* .item:nth-child(4) {
+    background-color: lightpink;
+    padding-top: 50px;
+    font-size: 2rem;
+    height: 100px;
+} */
