@@ -10,18 +10,37 @@ body {
 }
 
 .container {
-    height: 500px;
+    height: 500px; 
     background-color: snow;
     display: flex;
+    width: 350px;
+    /* flex-wrap: nowrap; /* Este es el valor por default. Los items se ajustan al ancho del contenedor.*/ 
+    flex-wrap: wrap; /* Esto permite tener multiples lineas, si los items no caben en el contenedor, dará un salto de línea. */
+    /* align-content: normal; */ /* valor por default */
+    /* align-content: flex-start;  /* Ajusta las lineas al inicio del eje transversal */
+    /* align-content: flex-end; */ /* Ajusta las lineas al final del eje transversal */
+    /*align-content: center; */ /* Ajusta las lineas al centro del eje transversal */
+    /*align-content: space-around; /* Distrubuye el espacio alrededor de cada linea */
+    /*align-content: space-evenly; */ /* Distribuye el espacio proporcionalmente entre lineas y el contenedor. */
+    /* align-content: stretch;  *//* Estiran el alto de los items sobre el eje transversal. Los items no deben tener un alto definido. */
+    /*align-content: space-between; /* Distribuye el espacio proporcionalmente entre cada linea. Sin considerar el contenedor */
+
+    align-content: space-evenly;
+    justify-content: space-between;
+    align-content: space-between;
+
+
+
+    
     /* align-items: flex-start Alinea hacia arriba */
     /*align-items: flex-end; Alinea hacia abajo*/
     /*align-items: center; Alinea en el centro*/
     /*     align-items: stretch; Crece en la altura los elementos en espacio disponible. Los utems no deben tener alto definido.*/
     /*align-items: baseline; Alinea los items en funcion de la linea base del texto que contienen. Independientemente del tamaño del texto, ubicacion del contenido y altura del item.
     */
-    align-items: center;
+    /* align-items: center;
     flex-direction: row-reverse;
-    justify-content: center;
+    justify-content: center; */
     
 
     /*display: inline-flex;
@@ -42,7 +61,7 @@ body {
 .item{
     background-color: mediumpurple;
     width: 100px;
-   height: 100px;
+    height: 100px;
     text-align: center;
     font-size: 25px;
     font-weight: bold;
