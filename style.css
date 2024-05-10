@@ -10,77 +10,48 @@ body {
 }
 
 .container {
-    display: flex; /* Esto habilita las propiedades de Flexbox */
-    flex-direction: row; /* Esta propiedad es la propiedad por default. */
-    /* flex-direction: column; */
+    display: flex;    
     background-color: snow;
 }
 
 /* 
-    Propiedades de Flexbox
-     Flex-basis -> Tamaño del main-size del elemento. Es como un 'como un width' ancho base del elemento.
+    Propiedades de Flexbox para los Items
 
-        Cuando flex-direction; row | row reverse -> flex-basis= ancho
-        Cuando flex-direction; coum | colum-reverse -> flex-basis= alto
+        +flex-grow -> Esta propiedad ajusta el factor de crecimiento de los elementos, en función del espacio disponible. El valor por default es 'auto'.
 
-     Flex-Basis es relativa al espacio disponible del contenedor. Si no hay espacio suficiente los elementos no creceran más allá.
+        Esta propiedad recibe valores numericos: 1, 2, 3, 4...
 
-     Si tengo Flex-basis declarado el width/height no funciona.
+        El numero que coloquemos es el factor de crecimiento.
 
-    
-    */
-
-        
+*/
 
 .item{
-    flex-basis: 100px;
-    width: 200px;
-    height: 500px;
+    flex-grow: auto; /* Esta  propiedad es el valor por default. */
+    flex-grow: 1; /* Va a hacer que todos los items crescan con el mismo factor */
+
     background-color: mediumpurple;
     text-align: center;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
     border: 1px solid black;
 }
 
-/* El Inline-flex se ajusta al ancho de los items
+.snow {
+    flex-grow: 10;
+    background-color: rgb(151, 255, 222);
+}
 
-El flex; se ajusta al espacio disponible*/
+.maruchan {
+    flex-grow: 7;
+    background-color: blanchedalmond;
+}
 
-/* Vamos a usar pseudoclases para seleccionar los items individualmente. */
+.kakaroto {
+    flex-grow: 5; /* El item de esta clase crece con un valor de 2. */
+    background-color: cornflowerblue;
+}
 
-/* Reto
-
-1.Cada item debe tener un tamaño de fuente distinto.
-
-2.Cada item debe tener un padding top distinto
-
-3. Cada item debe tener un alto distinto. Que no exceda el alto del contenedor*/
-
-/* .item:nth-child(1) {
-    background-color: lightblue;
-    padding-top: 100px;
-    font-size: 2rem;
-    height: 200px;
-} */
-
-/* .item:nth-child(2) {
-    background-color: lightsalmon;
-    padding-top: 302px;
-    font-size: 30px;
-    height: 344px;
-} */
-
-/* .item:nth-child(3) {
-    background-color: lightgreen;
-    padding-top: 44px;
-    font-size: 80px;
-    height: 444px;
-} */
-
-/* .item:nth-child(4) {
-    background-color: lightpink;
-    padding-top: 50px;
-    font-size: 2rem;
-    height: 100px;
-} */
+.pastel {
+    flex-grow: 1;
+    background-color: rgb(175, 233, 235);
+}
